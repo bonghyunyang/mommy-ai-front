@@ -35,9 +35,9 @@ function appendMessage(message, isUser) {
     }
 }
 
-async function getFortune() {
+async function getAiResponse() {
     showLoading()
-    const url = 'http://localhost:3000/fortuneTell';
+    const url = 'https://3244ah642yeuqn2tycde2rudbu0griyq.lambda-url.ap-northeast-2.on.aws/getResponse';
 
     try {
         const response = await fetch(url, {
@@ -77,7 +77,7 @@ function sendMessage() {
     }
     appendMessage(message, true);
     messageInput.value = '';
-    getFortune();
+    getAiResponse();
 }
 
 function showLoading() {
