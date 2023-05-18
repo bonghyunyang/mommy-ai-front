@@ -160,6 +160,18 @@ function addInitialMessage() {
             <p>상기 약관은 Mommy AI와 사용자 간의 법적인 계약을 형성합니다. 사용자가 서비스를 이용함으로써 이 약관의 내용에 동의하는 것으로 간주됩니다.</p>
         `;
         modal.style.display = 'block';
+    } else if (type === 'author') {
+        title.textContent = '만든사람';
+        text.innerHTML = `
+            <p>https://www.codingzipsa.co.kr</p>
+            <p>Frontend: HTML5, CSS, Vanila Javascript</p>
+            <p>Backend: ChatGPT Open API Powered by AWS Lambda</p>
+            <p style="font-weight: 700">그리고</p>
+            <p>양코리</p>
+            <p>양흰둥</p>
+            <p>언제나 고마운 매실이 엄마 @corizzang</p>
+        `;
+        modal.style.display = 'block';
     }
 }
 
