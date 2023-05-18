@@ -2,10 +2,12 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keyword" content="임산부, chatGPT, 출산, 육아, AI검색">
+    <meta name="description" content="임신, 출산, 육아는 mommy AI에게 물어보세요!">
+    <meta name="author" content="codingzipsa">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mommy AI</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -13,6 +15,9 @@
 <body>
     <div class="container">
         <img class="main-image" src="./pregnant.png">
+        <div class="loading" id="loading">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
         <div class="chat-box" id="chatBox">
             <div class="message bot-message">안녕하세요, Mommy AI에요!</div>
         </div>
@@ -20,8 +25,19 @@
             <input type="text" id="messageInput" placeholder="">
             <button onclick="sendMessage();">입력</button>
         </div>
-        <div class="loading" id="loading">
-            <i class="fas fa-spinner fa-spin"></i>
+    </div>
+    <div class="footer">
+        <div class="terms-link">
+            <!-- 인증인가 추가 시 하기 약관 추가할 것 -->
+            <!-- <a href="#" onclick="showTerms('privacy')">개인정보보호약관</a> -->
+            <a href="#" onclick="showTerms('service')">이용약관</a>
+        </div>
+    </div>
+    <div class="terms-modal" id="termsModal">
+        <div class="terms-content">
+            <h2 id="termsTitle"></h2>
+            <div id="termsText"></div>
+            <button onclick="closeTerms()">닫기</button>
         </div>
     </div>
     <script src="./script.js"></script>

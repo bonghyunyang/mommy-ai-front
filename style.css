@@ -1,14 +1,15 @@
 body {
-    font-family: 'Nanum Square', sans-serif;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     margin: 0;
     padding: 0;
+    background-color: #fcf7fc;
 }
 
 .container {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: transparent;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -19,7 +20,7 @@ h1 {
 
 .chat-box {
     overflow-y: auto;
-    max-height: 450px;
+    max-height: 250px;
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #fff;
@@ -126,8 +127,88 @@ h1 {
 .main-image {
     display: block;
     margin: 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.terms-link {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.terms-link a {
+    margin-right: 10px;
+}
+
+.privacy-link {
+    margin-right: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.terms-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.terms-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+}
+
+.terms-content h2 {
+    margin-bottom: 10px;
+}
+
+.terms-content button {
+    padding: 5px 10px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #3A4CA8;
+    color: #ffc0cb;
+    border: 1px solid #3A4CA8;
+    border-bottom: 0;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.terms-text-container {
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+.terms-text {
+    margin: 0;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+#termsText {
+    overflow-y: scroll;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 /* Media Query for Mobile */
@@ -136,15 +217,17 @@ h1 {
         max-width: 100%;
         margin: 0;
         padding: 10px;
+        margin-top: 100px;
     }
 
     .chat-box {
-        max-height: calc(100vh - 350px);
+        max-height: calc(100vh - 600px);
         margin-bottom: 5px;
         padding: 5px;
     }
 
     .input-group {
+        height: 120px;
         flex-direction: column;
     }
 
@@ -154,13 +237,19 @@ h1 {
     }
 
     .input-group button {
+        height: 50px;
         width: auto;
         margin-top: 10px;
         margin-left: 0;
     }
 
     .main-image {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .terms-content {
+        width: 300px;
+        height: 400px;
     }
 }
